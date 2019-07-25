@@ -16,7 +16,11 @@ function Person(firstName, lastName, dob) {
 	*/
 }
 
-// Adding methods to the Prototype object
+// Adding methods to the Prototype property
+
+// When a function (constructor) is created in JavaScript JavaScript engine adds a prototype property to the function.
+// This prototype property is an object (called a prototype object) which has a constructor property by default.
+// The constructor property points back tp the function on which prototype object is a property
 
 // Calculate age
 Person.prototype.calculateAge = function () {
@@ -46,4 +50,6 @@ mary.getsMarried('Smith');
 console.log(mary.getFullName());
 
 console.log(mary.hasOwnProperty('firstName'));
+
+// Since this method was added to the prototype object, even though we can access it it is not a property of the Person constructor
 console.log(mary.hasOwnProperty('getFullName'));
